@@ -1,0 +1,35 @@
+# Allows us to start the stack without touching too much of our local system
+#
+# note: the application initialization will download/unpack/configure files
+# in the local directory...
+#
+
+version: '3.7'
+services:
+  sarvie:
+    container_name: sarvie
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '3000:3000'
+    # The application wants to download things to the local directory
+    volumes:
+      - ./:/app:rw
+    environment:
+      PORT: ${PORT:-3000}
+# development
+#      GRIDREF_URL: http://localhost
+# production
+#      GRIDREF_URL: https://gridref.sarv.ie/?reftype=NATGRID&refs=
+    stdin_open: true # -i
+    tty: true # -t
+#    networks:
+#      - sarvie
+
+#networks:
+#  sarvie:
+#    driver: 'bridge'
+
+#volumes:

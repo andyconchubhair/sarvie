@@ -1,0 +1,26 @@
+{
+  "name": "sarvie",
+  "version": "1.0.0",
+  "description": "To test locally, references to hosting location need to be changed to localhost. Search for the lines to be uncommented by searching for \"LOCAL MACHINE\" in in Dockerfile & main.js.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyconchubhair/sarvie.git"
+  },
+  "author": "Andy O'Connor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyconchubhair/sarvie/issues"
+  },
+  "homepage": "https://github.com/andyconchubhair/sarvie#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.18"
+  }
+}
