@@ -8,12 +8,11 @@ const gridrefUrl = "https://gridref.sarv.ie/?reftype=NATGRID&refs="
 let gridref;
 if(window.location.href.indexOf("") > -1) {
 	const queryString = window.location.search;
-	console.log("querystring is" + queryString);
+	console.log("11 querystring is" + queryString);
 	if(queryString){
 		const urlParams = new URLSearchParams(queryString);
-		gridref = urlParams.get('');
+		gridref = urlParams.get('gridref');
 		gridref = sanitise(gridref);
-		console.log("Final query string grid reference is: " + gridref);
 		convert(gridref);
 	}
 }
@@ -71,38 +70,37 @@ document.getElementById('gridrefbutton').addEventListener("click", function(e){
 	let elements = form.elements;
 	gridref = elements.gridref.value;
 	gridref = sanitise(gridref);
-	console.log("Final grid reference is: " + gridref);
+	console.log("74 Final grid reference is: " + gridref);
 	convert(gridref);
 },false);
 
 function convert(gridref){
 	//request from gridref api
-  console.log("The grid reference for converting is: "+ gridref);
+  console.log("80 The grid reference for converting is: "+ gridref);
 	let xmlHttp = new XMLHttpRequest();
-  xmlHttp.addEventListener("load", reqListener);
-	
+  	xmlHttp.addEventListener("load", reqListener);
 	xmlHttp.open( "GET", gridrefUrl + gridref );
 	  
 	xmlHttp.send();	
 }
 
 function reqListener() {
-	console.log(this.responseText);
+	// console.log(this.responseText);
 	//parse latitude & longitude as string separated by "+"
 	let parser = new DOMParser();
 	let xml = parser.parseFromString(this.responseText,"text/xml");
 
 	//generate string
 	let latitude = xml.getElementsByTagName("latitude")[0].childNodes[0].nodeValue;
-	console.log("The Latitude is: "+ latitude);
+	console.log("98 The Latitude is: "+ latitude);
 	let longitude = xml.getElementsByTagName("longitude")[0].childNodes[0].nodeValue;
-	console.log("The Longitude is: "+ longitude);
+	console.log("100 The Longitude is: "+ longitude);
 	let string = latitude + ",+" + longitude;
-	console.log(string);
+	console.log("102 " + string);
 	
 	//redirect to google maps
 	//https://www.google.com/maps?z=12&t=h&q=loc:53.230953+-6.3702554
-	window.location.href = 'https://www.google.com/maps?z=12&t=h&q=loc:' +string;
+	// uncomment me window.location.href = 'https://www.google.com/maps?z=12&t=h&q=loc:' +string;
 }
 
 
