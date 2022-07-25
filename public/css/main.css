@@ -46,3 +46,19 @@ input[type=button] {
 	font-weight: bold;
 	border: 1px solid black;
 } */
+
+.blue {
+	color: blue;
+}
+
+.red {
+	color: red;
+}
+
+.black {
+	color: black;
+}
+
+.green {
+	color: green;
+}
