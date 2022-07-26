@@ -53,7 +53,7 @@ gridrefEntry.addEventListener("blur",function(e){
 			//present span error message;
 			if(document.getElementsByTagName("error").length == 0){
 				let err = document.createElement("error");
-				err.innerHTML = 'Grid reference needs to be a 6, 8 or 10 number reference';
+				err.innerHTML = 'Grid reference needs to be a 6, 8, or 10 digit reference';
 				target.parentNode.insertBefore(err, target.nextSibling);
 				return;
 			}
