@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <h1>
+    <h1 class="logo">
       <span class="blue">S</span>
       <span class="red">A</span>
       <span class="black">R</span>
@@ -24,22 +24,23 @@
   </div>
   <div class="container">
     <div class="one-half column">  
-      <p>Use an Irish Grid reference to a plot a route on google maps</p>
+      <p>Use an Irish grid reference to a plot a route on google maps.</p>
+      <p>Please use a 6, 8, or 10 digit grid reference with no spaces.</p>
+      <form id="igrim" method="get">
+        <div class="row">
+            <label for="gridref">Enter your grid reference:</label>
+            <input class="u-full-width" type="text" placeholder="A12345678" id="gridref" name="gridref" required>
+        </div>
+        <input class="button-primary" id="gridrefbutton" type="submit" value="Show on map">
+      </form>
+    </div>
+    <div class="one-half column info">
       <p>Grid reference accuracy:</p>
       <ul>
         <li>6-digit (A123456): 100m grid square</li>
         <li>8-digit (B12345678): 10m grid square</li>
         <li>10-digit (C1234567890): 1m grid square</li>
       </ul>
-    </div>
-    <div class="one-half column">
-      <form id="igrim" method="get">
-        <div class="row">
-            <label for="gridref">Enter your grid reference:</label>
-            <input class="u-full-width" type="text" placeholder="A12345678" id="gridref" name="gridref" required>
-        </div>
-        <input class="button-primary" id="gridrefbutton" type="submit" value="Convert">
-      </form>
     </div>
   </div>
 	

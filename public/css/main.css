@@ -20,6 +20,19 @@ h1 {
 	color: green;
 }
 
+.logo {
+	text-align: center;
+}
+
+.info {
+	background-color: #f4e9cd;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
 error {
 	display: block;
 	background-color: red;
