@@ -4,7 +4,7 @@ FROM node:14.16.1-alpine
 # Create app directory
 WORKDIR /usr/src/sarvie
 
-ARG NODE_ENV=Development 
+ARG NODE_ENV=Production 
 ENV NODE_ENV ${NODE_ENV}
 
 # Install app dependencies
@@ -19,6 +19,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD [ "npm", "start" ]

@@ -17,13 +17,13 @@ Before implementing in Production, be sure to revert to the PRODUCTION commmente
 https://cloud.google.com/build/docs/running-builds/start-build-command-line-api
 https://cloud.google.com/sdk/gcloud/reference/run/deploy
 https://cloud.google.com/load-balancing/docs/https/setup-global-ext-https-serverless#console_1
-* Change dockerfile and gridrefUrl on main.js
+* Change dockerfile, and gridrefUrl on main.js
 * gcloud auth login
 * gcloud projects list
 * gcloud config set project sarv-319519
 * gcloud builds submit --tag gcr.io/sarv-319519/sarv
 * gcloud run deploy sarv --image gcr.io/sarv-319519/sarv
-* https://
+* https://sarv-ztvtzvzn7a-ew.a.run.app
 * IP: 
 * https://sarv.ie
 

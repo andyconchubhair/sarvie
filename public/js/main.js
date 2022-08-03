@@ -100,7 +100,7 @@ function reqListener() {
 	
 	//redirect to google maps
 	//https://www.google.com/maps?z=12&t=h&q=loc:53.230953+-6.3702554
-	// uncomment me window.location.href = 'https://www.google.com/maps?z=12&t=h&q=loc:' +string;
+	window.location.href = 'https://www.google.com/maps?z=12&t=h&q=loc:' +string;
 }
 
 
