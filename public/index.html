@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
+	<meta charset="utf-8">
   <title>SARV</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/main.css" />
-
 </head>
 
 <body>
-
-	<h1>
-		<span style='color: blue'>S</span>
-		<span style='color: red'>A</span>
-		<span style='color: black'>R</span>
-		<span style='color: blue'>V</span>
-		<span style='color: green'>I</span>
-		<span style='color: red'>E</span>
-
-	</h1>
-	<h3>Use an Irish Grid reference to a plot a route on google maps</h3>
-	<br />
-	<p>6-digit references provide precision to 100m grid squares; 8 digits to 10m grid squares, and 10 digits to 1m. <br /><br /> Paste your 8 or 10 grid reference here (e.g. O0886621276): </p>
-	<br />
-	<form id="igrim" method="get">
-		<fieldset>
-			<input type="text" id="gridref" name="gridref" placeholder="A12345678" required/><br /><br />			
-			<input type="button" id="gridrefbutton" value="Convert" />
-		</fieldset>
-	</form>
+  <div class="container">
+    <h1 class="logo">
+      <span class="blue">S</span>
+      <span class="red">A</span>
+      <span class="black">R</span>
+      <span class="blue">V</span>
+      <span class="green">I</span>
+      <span class="red">E</span>
+    </h1>
+  </div>
+  <div class="container">
+    <div class="one-half column">  
+      <p>Use an Irish grid reference to a plot a route on google maps.</p>
+      <p>Please use a 6, 8, or 10 digit grid reference with no spaces.</p>
+      <form id="igrim" method="get">
+        <div class="row">
+            <label for="gridref">Enter your grid reference:</label>
+            <input class="u-full-width" type="text" placeholder="A12345678" id="gridref" name="gridref" required>
+        </div>
+        <input class="button-primary" id="gridrefbutton" type="submit" value="Show on map">
+      </form>
+    </div>
+    <div class="one-half column info">
+      <p>Grid reference accuracy:</p>
+      <ul>
+        <li>6-digit (A123456): 100m grid square</li>
+        <li>8-digit (B12345678): 10m grid square</li>
+        <li>10-digit (C1234567890): 1m grid square</li>
+      </ul>
+    </div>
+  </div>
 	
 	<script crossorigin='anonymous' src="js/main.js" ></script>
 	
